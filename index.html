@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #faf6f0;
             color: #333;
+            overflow: hidden; /* Prevent scrolling until logged in */
         }
         .navbar, .hero, .products, .footer {
             display: none; /* Hide main content until sign-in */
@@ -244,6 +245,7 @@
                 document.querySelector(".hero").style.display = "flex";
                 document.querySelector(".products").style.display = "flex";
                 document.querySelector(".footer").style.display = "block";
+                document.body.style.overflow = "auto"; // Allow scrolling after login
             } else {
                 // Show error message
                 document.getElementById("error-message").style.display = "block";
